@@ -15,7 +15,15 @@ The steps to turn it into a more realistic Playbook generator is more-or-less as
     url: "https://perplexity.ai"
   }```
 
-What needs to be done (very briefly):
+## Scoring: 
+The top 3 highest-scoring tools are returned. The scoring weights are:
+
+Category match: 3 points
+Description match: 2 points
+Name match: 1 point
+Effectiveness score: 0.5 weight multiplier
+
+## What needs to be done (very briefly):
 
 1. Extract search keywords from survey and use them instead of the hard-coded keywords.
 2. Use semantic matching instead of strict keyword matching for the search.
@@ -23,6 +31,6 @@ What needs to be done (very briefly):
     - The Internet search will require use of an intelligent search engine or search AI, maybe together with an LLM, to do a proper search that covers the actual "meaning" (semantics, essence) of what we are searching for.  
     - Internet search will require API keys.
     - Internet search will require well-planned and tested prompts or questions.
-4. Internet search and Knowledge Base search should cover both tool/technology recommendations and life-style recommendations
+4. Internet search and Knowledge Base search should cover both tool/technology recommendations and life-style recommendations. And the scoring scheme should probably be improved.  
 5. Knowledge Base should be updated (with update date) after each Internet search.
 6. Knowledge Base is a convenience and a performance enhancement and will reduce the cost of the API-key based search. It may not be implemented initially but it should be implemented as soon as possible.

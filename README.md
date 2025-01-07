@@ -7,13 +7,11 @@ The steps to turn it into a more realistic Playbook generator is more-or-less as
 1. The search for is only a keyword match. The search functionality is implemented in ```src/utils/searchTools.ts```, which uses ```calculateToolScore``` from ```src/utils/scoring.ts``` to <ins>score and rank</ins> the tools based on the keywords.
 2. The tools themslves are in ```src/data/tools.ts``` as a  list with the following structure for each entry:
 
-   ```{
-    name: "Perplexity",
+    ```name: "Perplexity",
     description: "AI-powered search engine for intelligent web searching",
     effectivenessScore: 92,
     category: "General Assistance",
-    url: "https://perplexity.ai"
-  }```
+    url: "https://perplexity.ai" ```
 
 ## Scoring: 
 The top 3 highest-scoring tools are returned. The scoring weights are:
